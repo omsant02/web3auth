@@ -10,4 +10,4 @@ export const chainConfig = {
   tickerName: "Ethereum",
 };
 
-export const contractAddress = "";
+export const contractAddress = "0xd964E79743B44599De93AAA7B8Da0F884b42E70b";

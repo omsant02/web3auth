@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import initializeWeb3Auth from "./utils/authService";
 import "./App.css";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
 
 function App() {
   const [web3authInstance, setweb3authInstance] = useState(null);
@@ -19,7 +21,16 @@ function App() {
     };
     initWeb3Auth();
   }, []);
-  return <div className="App">react</div>;
+  return (
+    <div className="App">
+      <Login
+        web3authInstance={web3authInstance}
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+      />
+      <Logout />
+    </div>
+  );
 }
 
 export default App;
